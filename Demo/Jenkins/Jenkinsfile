@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    stages {
+        stage('git') {
+            steps {
+                git 'https://github.com/Danielyan86/test-automation-in-docker-practice.git'
+            }
+        }
+        stage('unit test') {
+            steps {
+                echo "run unit test"
+            }
+        }
+
+        stage('docker build') {
+            steps {
+                sh label: '', script: ''' cd Demo/FlaskAppDemo
+                 docker build -t web-app .'''
+            }
+        }
+
+        stage('stop container') {
+            steps {
+                script {
+                    try {
+                        docker stop flask-app
+                    } catch (err) {
+                      echo err.getMessage()
+                    }
+                }
+            }
+        }
+
+        stage('start container') {
+            steps {
+                sh label: '', script: 'docker run -p 4000:80 --name flask-app web-app'
+            }
+        }
+
+    }
+}
