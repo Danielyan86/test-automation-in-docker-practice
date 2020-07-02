@@ -15,7 +15,9 @@
 # 容器化技术VS虚拟机
 - 传统虚拟机（比如，vmware，virtualbox）需要占用大量硬件资源
 - 虚拟启动时间慢
-![传统虚拟机](https://raw.githubusercontent.com/Danielyan86/xiaoshujiang_images/master/小书匠/1593695963154.png)
+- 架构图对比
+    - ![传统虚拟机](https://raw.githubusercontent.com/Danielyan86/xiaoshujiang_images/master/小书匠/1593695963154.png)
+    - ![docker](https://raw.githubusercontent.com/Danielyan86/xiaoshujiang_images/master/小书匠/1593696201008.png)
 
 # 什么是docker？
 - Docker是一个开源的引擎，可以轻松的为各种应用创建一个轻量级的、可移植的、自给自足的容器。
