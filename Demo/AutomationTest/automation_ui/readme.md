@@ -1,4 +1,4 @@
-# 此例子用于UI自动化测试例子演示
+# 此文件夹用于UI自动化测试例子演示
 ## 环境准备
 - 编译镜像  
 ```docker
@@ -24,3 +24,5 @@ python BingAutomationTest_container.py
 ```shell script
 sh run_script_in_container.sh
 ```
+
+## 多容器化运行
