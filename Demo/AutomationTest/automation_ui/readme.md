@@ -26,3 +26,6 @@ sh run_script_in_container.sh
 ```
 
 ## 多容器化运行
+- 启动两个容器
+- 在两个容器里面分别运行脚本
+
