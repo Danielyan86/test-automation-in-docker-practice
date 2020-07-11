@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-docker kill $(docker ps -q)
 docker container prune -f
 
 cd Demo/AutomationTest/automation_ui
