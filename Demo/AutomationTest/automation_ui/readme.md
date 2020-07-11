@@ -11,7 +11,7 @@ docker build -t automation-test .
 ## 运行方式
 - 在本地运行 
 ```shell script
-python BingAutomationTest_local.py.py
+python BingAutomationTest_local.py
 ```
 - 通过selenium-grid方式在容器里面运行
 ```shell script

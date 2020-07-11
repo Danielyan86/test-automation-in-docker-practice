@@ -33,4 +33,6 @@ def run_UI_test_in_docker_env():
 
 
 if __name__ == '__main__':
+    # 运行此程序之前，需要有个一个已经启动起来的容器
+    # 此脚本会被run_script_in_container.sh 调用
     run_UI_test_in_docker_env()
