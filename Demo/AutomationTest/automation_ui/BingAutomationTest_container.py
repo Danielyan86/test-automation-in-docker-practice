@@ -26,14 +26,14 @@ def run_UI_test_in_docker_env(selenium_grid_url=None):
     except Exception as e:
         print(e)
     finally:
-        time.sleep(10)
+        time.sleep(20)
         d.close()
         d.quit()
 
 
 if __name__ == '__main__':
     # 运行此脚本之前需要一个已经启动起来的容器
-    # docker run -d --rm -p 5904:25900 -p 4444:24444 --name automation-container -v "$(pwd)":/home/seluser/automation -e SCREEN_WIDTH=1024 -e SCREEN_HEIGHT=768 automation-test:latest
+    # docker run -d --rm -p 5904:25900 -p 4444:24444 --name automation-container  -e SCREEN_WIDTH=1024 -e SCREEN_HEIGHT=768 automation-test:latest
     # 此脚本用于本地执行，方便调试使用
     selenium_grid_url = "http://127.0.0.1:4444/wd/hub"
     run_UI_test_in_docker_env(selenium_grid_url=selenium_grid_url)
