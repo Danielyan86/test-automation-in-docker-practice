@@ -1,0 +1,3 @@
+- 本地启动 python app.py
+- docker启动 docker run -d -p 4000:80 --name flask-app web-app
+- 访问地址127.0.0.1:4000
