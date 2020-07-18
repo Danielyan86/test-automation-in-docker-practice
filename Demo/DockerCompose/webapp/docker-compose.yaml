@@ -1,14 +1,14 @@
-version: '2.0'
-services:
+version: '3.0' # 定义版本
+services:  #定义服务
   web:
     build: .
     ports:
-    - "5000:5000"
+      - "5000:5000"
     volumes:
-    - .:/code
-    - logvolume01:/var/log
+      - .:/code
+      - logvolume01:/var/log
     links:
-    - redis
+      - redis
   redis:
     image: redis
 volumes:

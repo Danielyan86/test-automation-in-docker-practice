@@ -1,3 +1,4 @@
-- 本地启动 python app.py
+- 编译镜像文件 docker build -t web-app:1.0 . (执行此命令需要切换到当前目录)
+- 本地启动 python app.py （查看本地运行效果 127.0.0.1）
 - docker启动 docker run -d -p 4000:80 --name flask-app web-app
 - 访问地址127.0.0.1:4000

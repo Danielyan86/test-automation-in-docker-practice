@@ -3,6 +3,8 @@ import time
 
 from selenium import webdriver
 
+timeout_number = 25
+
 
 def run_UI_test_in_docker_env(selenium_grid_url=None):
     # selenium grid方式远程运行
@@ -13,16 +15,15 @@ def run_UI_test_in_docker_env(selenium_grid_url=None):
     d = webdriver.Remote(command_executor=selenium_grid_url, desired_capabilities=capabilities)
 
     # 设置超时
-    d.set_page_load_timeout(10)
-    d.set_script_timeout(10)
+    d.set_page_load_timeout(timeout_number)
+    d.set_script_timeout(timeout_number)
 
     url = "http://www.bing.com"
     text_box_id = "sb_form_q"
-    # 输入URL
-    d.get(url)
-    # 搜索框输入test
+
     try:
-        d.find_element_by_id(text_box_id).send_keys("test\n")
+        d.get(url)  # 输入URL
+        d.find_element_by_id(text_box_id).send_keys("test\n")  # 搜索框输入test
     except Exception as e:
         print(e)
     finally:
