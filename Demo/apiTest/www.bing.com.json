@@ -1,0 +1,79 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {}
+    },
+    "teststeps": [
+        {
+            "name": "/",
+            "request": {
+                "url": "https://www.bing.com/",
+                "params": {
+                    "toWww": "1",
+                    "redig": "041910C67ADC4C2AA21DF81619C22EF7"
+                },
+                "method": "GET",
+                "headers": {
+                    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+                    "sec-fetch-site": "none",
+                    "sec-fetch-mode": "navigate",
+                    "sec-fetch-user": "?1",
+                    "sec-fetch-dest": "document"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/th",
+            "request": {
+                "url": "https://www.bing.com/th",
+                "params": {
+                    "id": "OHR.NineSpotted_EN-US0305121800_1920x1080.jpg",
+                    "rf": "LaDigue_1920x1080.jpg"
+                },
+                "method": "GET",
+                "headers": {
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36"
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "/fd/ls/lsp.aspx",
+            "request": {
+                "url": "https://www.bing.com/fd/ls/lsp.aspx",
+                "method": "POST",
+                "headers": {
+                    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
+                    "content-type": "text/xml",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-dest": "empty"
+                },
+                "data": "<ClientInstRequest><Events><E><T>Event.ClientInst</T><IG>D034C7E959EC4F80923C9AE26921C5D2</IG><TS>1595126553308</TS><D><![CDATA[[{\"T\":\"CI.BoxModel\",\"FID\":\"CI\",\"Name\":\"v2.8\",\"SV\":\"4\",\"P\":{\"C\":26,\"N\":1,\"I\":\"5nj\",\"S\":\"T+MT\",\"M\":\"V+L+M+MT+E+N+C+K+BD\",\"T\":7156,\"K\":\"4qw+IMG.sbiDmImg sbiable rms_img+IMG+www.bing.com+https+link+xmlhttprequest+rp%2Flmu8EBCaPRMKtay8LSArGyY3mv4.br.js+rp%2FioAVnYYj8CxpiUPxW_EUQF5pvFY.br.js+script+rp%2FtWPevWDlnewIMCA4EWSkpEx8Wrs.br.js+11s+rp%2FT0lAQLm87gv5AUytm5v9--Y-Yj0.br.js+18e+18j+fetch+18l+18m+18u+192+img+19c+clientinst+19g+19h+19i+1c0+1gz+1n0+1n2+rp%2FEQzAskuAH6b-JRyTiMVHCIVSOg4.br.js+1eb+1hk+1hn+1hq+1hz+1i0+1i1+1i2+1i3+1i4+1i5+1i6+1i7+1ji+1te+1jl+1tf+1jq+1nd+1js+1jy+1jz+1k0+1k3+1k5+1k7+1k8+1k9+1kb+1kd+1ke+1kf+1ki+1kj+1kn+1o0+1ko+1o5+1o6+1o8+1la+1nl+rp%2FhUDr5cv9tKe-5diQ3VKxU8ZfGLQ.br.js+1p3+1z9+1zb+rp%2FBZ4UfIeWu9BfKpat2kZG4pw6tmo.br.js+24z+rp%2FZW8LH3PisO4gltwIEbY0N_vx3Uo.br.js+2an+2b1+rp%2FxrUJJ8sN8ucbiFbMJle3n0IfRwU.br.js+2gy+rp%2FLXu4eYVt3NhFk3Ud9ZbhZ_PYFaA.br.js+2mz+rp%2FJXkjDPywJD9oeuWPLy7bD8Jc6mw.br.js+2sn+rp%2FilbkF5vv0sk3tJ8LDY0Nm39p12g.br.js+2yc+rp%2F19VD_xXLwYDLP9x0czAsnHzyTG4.br.js+33y+rp%2FK-zGOGB37j2F2Vrx_NLgjQX9TQE.br.js+3aw+rp%2FQLDyHgBMOTW5a2dx4lWrHUfqAvU.br.js+3h0+rp%2FMohyNcCsL9y1DOhEUBymJyO79lg.br.js+3ml+rp%2F10zb895z70spH_-S34cUenfTpzA.br.js+3s7+rp%2F0HJkwKfz8HcED2b9-NxVK55fUcQ.br.js+3xs+rp%2FpqFWGnKBRdI0HvcGxln7rQM1Sg0.br.js+43c+493+nj%2FIoGu84dxcNh7wQyayqOk_R7kai4.js+494+49a+rp%2FTMtX1CyLJ-igawB5nYv0evA12Sg.br.js+49f+rp%2F2VWXzuPxhOgqIYh9otFB8Fgo7kU.br.js+4f8+4fz+rp%2Fupt7Ri3AVBCCNSuZMRK4rMBqXWQ.br.js+4kx+4qs+4qu+4qv+4rs\",\"F\":0},\"V\":\"@0/0/0/cm/ii/cm/ii/2/g/visible/default\",\"L\":\"@0/0/UL#crs_pane//27/ij/hi/4g/9/T/2+@0/1/IMG#id_p//0/0/0/0/8/T/2+@0/2/IMG#sbi_b//fj/4m/s/n/a/T/2+@0/3/IMG.clsbtnimg rms_img//0/0/0/0/c/T/2+@0/4/IMG.clsoptbtnimg rms_img//0/0/0/0/c/T/2+@0/5/IMG.infbtnimg rms_img//0/0/0/0/f/T/2+@0/6/IMG.dpicon rms_img//0/0/0/0/e/T/2+@0/7/IMG#loadingimg//0/0/0/0/f/T/2+@0/8/IMG.psticon rms_img//0/0/0/0/g/T/2+@0/9/IMG.tpicon rms_img//0/0/0/0/f/T/2+@0/a/@1//0/0/0/0/d/T/2+@0/b/@1//0/0/0/0/d/T/2+@0/c/@1//0/0/0/0/d/T/2+@0/d/@1//0/0/0/0/d/T/2+@0/e/@1//0/0/0/0/d/T/2+@0/f/@1//0/0/0/0/d/T/2+@0/g/@1//0/0/0/0/d/T/2+@0/h/@1//0/0/0/0/d/T/2+@0/i/@2//a9/ad/w/w/c/T/2+@0/j/@2//27/jj/56/2g/f/T/2+@0/k/@2//7l/jj/56/2g/f/T/2+@0/l/@2//cz/jj/56/2g/f/T/2+@0/m/@2//id/jj/56/2g/f/T/2+@0/n/@2//nr/jj/56/2g/f/T/2+@0/o/@2//t5/jj/56/2g/f/T/2+@0/p/@2//yj/jj/56/2g/f/T/2+@0/q/@2//13x/jj/56/2g/f/T/2+@0/r/@2//19b/jj/56/2g/f/T/2+@0/s/@2//1ep/jj/56/2g/f/T/2+@0/t/@2//@1i/jj/56/2g/f/T/2+@0/u/@2//1ph/jj/56/2g/f/T/2+@0/v/@2//1uv/jj/56/2g/f/T/2+@0/w/@2//209/jj/56/2g/f/T/2+@0/x/@2//25n/jj/56/2g/f/T/2+@0/y/@2//@29/jj/56/2g/f/T/2+@0/z/@2//2gf/jj/56/2g/f/T/2+@0/10/@2//2lt/jj/56/2g/f/T/2+@0/11/@2//2r7/jj/56/2g/f/T/2+@0/12/@2//2wl/jj/56/2g/f/T/2+4t4/13/DIV#ajaxStyles//0/0/cm/0/1/MT/2+4xo/14/SPAN.rhlined hp//go/7/w/w/9/MT/2\",\"N\":\"-1/0//@3//navigation/lg/@4/16/16/16/1e/7y/a3+a9/1//@3/th/@5/0/@4/a9/0/a9/-1/-1/a9+a9/2//@3/@7/@5/6a/@4/a9/a9/a9/b2/gh/gj+ke/3//@3/first-paint//0/@4/-1/-1/-1/-1/-1/-1+ke/4//@3/first-contentful-paint//0/@4/-1/-1/-1/-1/-1/-1+lg/5//@3/cir2,cc,nc%2F4qpNFQdIWngcR5ndH6FX_LxtBG4.css/@5/g/@4/lg/0/lg/lk/ln/lw+lv/6//@3/cpt/@k/67/@4/lv/lv/lv/m0/s1/s2+lx/7//@3/simg%2Fbing_p_rr_teal_min.ico/other/5l/@4/lx/lx/lx/m2/rg/ri+m4/8//@3/ls%2Flsp.aspx/beacon/67/@4/m4/m4/m4/m7/sa/sb+oc/9//@3/cj,nj%2F1gALfzAtZG420lUk1O591yNKlgc.js/@9/8/@4/oc/0/oc/of/oi/ok+ov/a//@3/@8/@6/5g/@4/ov/ov/ov/oy/ua/uc+p4/b//@3/@a/@6/5j/@4/p4/p4/p4/p7/uk/uo+p9/c//@3/@c/@6/63/@4/p9/p9/p9/pd/v6/vc+p9/d//@3/@u/@6/6v/@4/p9/p9/p9/ph/v7/w5+pc/e//@3/@21/@6/68/@4/pc/pc/pc/pk/v7/vl+pd/f//@3/@7/@6/j/@4/pd/0/pd/pl/pm/px+pe/g//@3/@25/@6/68/@4/pe/pe/pe/pn/v8/vn+pg/h//@3/@27/@6/6c/@4/pg/pg/pg/pt/vh/vt+ph/i//@3/@2a/@6/6c/@4/ph/ph/ph/pu/vi/vt+ph/j//@3/@2c/@6/6c/@4/ph/ph/ph/q2/vi/vu+pk/k//@3/@2e/@6/6a/@4/pk/pk/pk/q3/vj/vu+pm/l//@3/@2g/@6/68/@4/pm/pm/pm/q4/vk/vv+pq/m//@3/@2i/@6/v/@4/pq/0/pq/q5/q9/ql+px/n//@3/@2k/@6/s/@4/px/0/px/q9/qc/qp+py/o//@3/@2m/@6/t/@4/py/0/py/qh/qj/qr+q0/p//@3/@2o/@6/t/@4/q0/0/q0/qm/qo/qu+q2/q//@3/@2q/@6/y/@4/q2/0/q2/qq/qs/r0+q4/r//@3/@2s/@6/x/@4/q4/0/q4/qr/qs/r1+q4/s//@3/@2u/@6/x/@4/q4/0/q4/qs/qt/r2+q6/t//@3/@2x/@6/10/@4/q6/0/q6/qt/qw/r7+q8/u//@3/@30/@6/z/@4/q8/0/q8/qt/qx/r7+q8/v//@3/@32/@6/z/@4/q8/0/q8/qt/qz/r8+q9/w//@3/@35/@6/z/@4/q9/0/q9/qv/r0/r8+uh/x//@3/@8/@9/73/@4/uh/uh/uh/w6/11j/11k+@b/y//@3/@a/@9/5l/@4/@b/@b/@b/11y/17b/17e+@d/z//@3/@c/@9/5r/@4/@d/@d/@d/18i/1e2/1e5+@e/10//@3/images%2Fsbi/@f/7g/@4/@e/@e/@e/18n/1fj/1g0+@g/11//@3/v1%2Ftrivia/@f/8j/@4/@g/@g/@g/18q/1h2/1h4+@h/12//@3/v1%2Fcarousel/@f/89/@4/@h/@h/@h/18r/1gt/1gv+@i/13//@3/api%2Fmodel/@f/7o/@4/@i/@i/@i/18x/1gh/1gj+@j/14//@3/th/css/0/@4/@j/0/@j/-1/-1/@j+@l/15//@3/@m/@k/df/@4/@l/@l/@l/1gm/1mo/1mr+@n/16//@3/@m/@k/dg/@4/@n/@n/@n/1go/1mp/1mx+@o/17//@3/@m/@k/ds/@4/@o/@o/@o/1gy/1n4/1n9+@p/18//@3/@m/@k/dj/@4/@p/@p/@p/@r/@s/@t+@q/19//@3/@m/@k/b2/@4/@q/@q/@q/@r/@s/@t+@v/1a//@3/@u/@9/92/@4/@v/@v/@v/1h6/1mn/@1d+@w/1b//@3/@m/@k/67/@4/@w/@w/@w/@x/1nr/1ns+@x/1c//@3/@m/@k/6e/@4/@x/@x/@x/1hv/@1u/1o1+@y/1d//@3/@m/@k/bp/@4/@y/@y/@y/1n7/@19/@1b+@z/1e/2/@3/rp%2FXvRHqJwJt19aXQca73hQTfvNMxk.svg/@k/0/@4/@z/0/@z/-1/-1/@z+@10/1f/3/@3/rp%2FfdVZU4ttbw8NDRm6H3I5BW3_vCo.svg/@k/0/@4/@10/0/@10/-1/-1/@10+@10/1g/4/@3/rp%2F4L4QdyjTv0HYE2Ig2ol9eYoqxg8.svg/@k/0/@4/@10/0/@10/-1/-1/@10+@11/1h/5/@3/rp%2FFsa_OI0AplCnVoXGca8ALOo0S0s.svg/@k/0/@4/@11/0/@11/-1/-1/@11+@12/1i/6/@3/rp%2FUYtUYDcn1oZlFG-YfBPz59zejYI.svg/@k/0/@4/@12/0/@12/-1/-1/@12+@12/1j/7/@3/rp%2Fwc2gMArZUmIGaKBiRM_M3i1Y-pM.gif/@k/0/@4/@12/0/@12/-1/-1/@12+@13/1k/8/@3/rp%2FKC_nX2_tPPyFvVw1RK20Yu1FyDk.svg/@k/0/@4/@13/0/@13/-1/-1/@13+@13/1l/9/@3/rp%2FNnFHhz2jL6yzChtIhaB5IIVKY5k.svg/@k/0/@4/@13/0/@13/-1/-1/@13+@14/1m/a/@3/rp%2FN55Tc-oLNOuzZam9OghLsR0GD5U.jpg/@k/0/@4/@14/0/@14/-1/-1/@14+@14/1n/b/@3/rp%2FH_VmuFPRwWZ4UrVl0mPztnf3z5U.jpg/@k/0/@4/@14/0/@14/-1/-1/@14+@15/1o/c/@3/rp%2Fn_C4vBfAV3O9RfkGjfduaZoxjAs.jpg/@k/0/@4/@15/0/@15/-1/-1/@15+@15/1p/d/@3/rp%2FkBH4DSEA84cgV7IKw7_Bwvm2NpI.jpg/@k/0/@4/@15/0/@15/-1/-1/@15+@15/1q/e/@3/rp%2Fn1U5gwBiwMo7s-fWOh2kSe3Kils.jpg/@k/0/@4/@15/0/@15/-1/-1/@15+@16/1r/f/@3/rp%2FCMm2G4GK3T9XHTMByeN2QI1OVUs.jpg/@k/0/@4/@16/0/@16/-1/-1/@16+@16/1s/g/@3/rp%2Fb4Jy0kwhnsWcsDQyuzAEsN7RmhQ.jpg/@k/0/@4/@16/0/@16/-1/-1/@16+@17/1t/h/@3/rp%2FELqKWpA6KkapLUFbOLS-IQ2zfXc.jpg/@k/0/@4/@17/0/@17/-1/-1/@17+@18/1u//@3/@m/@k/9y/@4/@18/@18/@18/1n8/@19/1th+@1a/1v//@3/@m/@k/9z/@4/@1a/@1a/@1a/1nb/@1b/1tl+@1c/1w//@3/@m/@k/9r/@4/@1c/@1c/@1c/@1d/@19/1ti+@1e/1x//@3/@m/@k/9u/@4/@1e/@1e/@1e/1ne/@1b/1tm+@1e/1y//@3/@m/@k/9w/@4/@1e/@1e/@1e/1nh/1tk/1to+@1f/1z/j/@3/th/@k/0/@4/@1f/0/@1f/-1/-1/@1f+@1g/20/k/@3/th/@k/0/@4/@1g/0/@1g/-1/-1/@1g+@1h/21/l/@3/th/@k/0/@4/@1h/0/@1h/-1/-1/@1h+@1i/22/m/@3/th/@k/0/@4/@1i/0/@1i/-1/-1/@1i+@1j/23/n/@3/th/@k/0/@4/@1j/0/@1j/-1/-1/@1j+@1k/24/p/@3/th/@k/0/@4/@1k/0/@1k/-1/-1/@1k+@1l/25/q/@3/th/@k/0/@4/@1l/0/@1l/-1/-1/@1l+@1m/26/s/@3/th/@k/0/@4/@1m/0/@1m/-1/-1/@1m+@1n/27/v/@3/th/@k/0/@4/@1n/@1n/@1n/-1/-1/@1n+@1o/28/w/@3/th/@k/0/@4/@1o/0/@1o/-1/-1/@1o+@1p/29/x/@3/th/@k/0/@4/@1p/0/@1p/-1/-1/@1p+@1q/2a/y/@3/th/@k/0/@4/@1q/0/@1q/-1/-1/@1q+@1r/2b/z/@3/th/@k/0/@4/@1r/0/@1r/-1/-1/@1r+@1s/2c/11/@3/th/@k/0/@4/@1s/0/@1s/-1/-1/@1s+@1t/2d/o/@3/th/@k/3a/@4/@1t/0/@1t/1nu/1nw/1nx+@1t/2e/r/@3/th/@k/3f/@4/@1t/0/@1t/1ny/@1u/1o3+@1t/2f/t/@3/th/@k/3l/@4/@1t/0/@1t/1o4/@1x/1o9+@1v/2g/u/@3/th/@k/3i/@4/@1v/0/@1v/@1w/@1w/@1x+@1v/2h/10/@3/th/@k/3m/@4/@1v/0/@1v/@1y/@1y/1ob+@1v/2i/12/@3/th/@k/3v/@4/@1v/0/@1v/1oc/1oi/1ok+@1z/2j//@3/@m/@k/99/@4/@1z/@1z/@1z/1od/1ui/1uj+@20/2k//@3/@m/@k/73/@4/@20/@20/@20/1om/1un/1uo+@22/2l//@3/@21/@9/a1/@4/@22/@22/@22/1tr/1z3/1z5+@23/2m//@3/notifications%2Frender/@6/6v/@4/@23/@23/@23/1zc/263/265+@24/2n//@3/@7/@9/5g/@4/@24/@24/@24/1zf/24q/24s+@26/2o//@3/@25/@9/5i/@4/@26/@26/@26/254/2af/2ah+@28/2p//@3/@27/@9/66/@4/@28/@28/@28/@29/2gt/2gu+@2b/2q//@3/@2a/@9/5x/@4/@2b/@2b/@2b/2h2/2mu/2mw+@2d/2r//@3/@2c/@9/5k/@4/@2d/@2d/@2d/2n2/2sh/2sj+@2f/2s//@3/@2e/@9/5k/@4/@2f/@2f/@2f/2sq/2y6/2y8+@2h/2t//@3/@2g/@9/5i/@4/@2h/@2h/@2h/2yh/33t/33u+@2j/2u//@3/@2i/@9/64/@4/@2j/@2j/@2j/342/39g/3a2+@2l/2v//@3/@2k/@9/60/@4/@2l/@2l/@2l/3bg/3gu/3gw+@2n/2w//@3/@2m/@9/5h/@4/@2n/@2n/@2n/3h6/3mh/3mi+@2p/2x//@3/@2o/@9/5h/@4/@2p/@2p/@2p/3mp/3s1/3s3+@2r/2y//@3/@2q/@9/5h/@4/@2r/@2r/@2r/3sa/3xm/3xo+@2t/2z//@3/@2s/@9/5g/@4/@2t/@2t/@2t/3xv/436/438+@2v/30//@3/@2u/@9/5n/@4/@2v/@2v/@2v/43l/48x/48z+@2w/31//@3/rewardsapp%2Fncheader/@6/6q/@4/@2w/@2w/@2w/499/4fr/4fu+@2y/32//@3/@2x/@9/7/@4/@2y/0/@2y/@2z/@2z/49c+@31/33//@3/@30/@9/5p/@4/@31/@31/@31/49p/4f3/4f4+@33/34//@3/@32/@9/5j/@4/@33/@33/@33/4ff/4kq/4ks+@34/35//@3/rp%2F0tz90SAhwro1-9UVcwS-Yj1pxCw.br.css/@5/c/@4/@34/0/@34/4g4/4g9/4gb+@36/36//@3/@35/@9/5r/@4/@36/@36/@36/4l5/4qm/4qo+@37/37//@3/rewardsapp%2FreportActivity/@6/6s/@4/@37/@37/@37/4r2/4xi/4xl+@38/38//@3/cj,nj%2FI7Rp5BtD4s6SOWDo6apn1wT1XMI.js/@9/18/@4/@38/0/@38/4rh/@3a/4s2+@39/39//@3/rp%2Fb2jK53ShtA2vbaZAckacg90Gv6k.br.js/@9/1a/@4/@39/0/@39/@3a/4s3/4s5\"}]]]></D></E></Events><STS>1595126553308</STS></ClientInstRequest>"
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        204
+                    ]
+                }
+            ]
+        }
+    ]
+}
