@@ -7,7 +7,7 @@ services:
       - "4000:80"
     command: python app.py
 
-  automationtest:
+  UI_environment:
     image: automation-test
     ports:
       - "5904:25900"
@@ -20,3 +20,12 @@ services:
     links: #link 之后，可以在容器内部通过服务名字找到web-app,避免使用ip查找
       - web-app
 
+  automation_env:
+    build: .
+    volumes:
+      - .:/home/seluser/
+    command: python /home/seluser/web_app_test.py
+    links:
+      - UI_environment
+    depends_on:
+      - UI_environment
