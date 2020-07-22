@@ -11,6 +11,6 @@ capabilities = webdriver.DesiredCapabilities.CHROME.copy()
 d = webdriver.Remote(command_executor=selenium_grid_url, desired_capabilities=capabilities)
 
 d.get(url)
-time.sleep(60)
+time.sleep(20)
 d.close()
 d.quit()

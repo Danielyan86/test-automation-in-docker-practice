@@ -6,28 +6,23 @@ services:
     ports:
       - "4000:80"
     command: python app.py
-
   UI_environment:
     image: automation-test
     ports:
       - "5904:25900"
       - "4444:24444"
-
     environment:
       SCREEN_WIDTH: 1280
       SCREEN_HEIGH: 800
     links: #link 之后，可以在容器内部通过服务名字找到web-app,避免使用ip查找
       - web-app
-
-
   automation_env:
     build: .
     volumes:
       - .:/home/seluser/
-    #    command: python /home/seluser/web_app_test.py
     links:
       - UI_environment
     depends_on:
       - UI_environment
+    # 容器启动后等待 UI_environment 环境准备好，再去调用自动化测试脚本
     command: ["/home/seluser/wait-for-it.sh", "http://UI_environment:24444/wd/hub","--", "python", "/home/seluser/web_app_test.py"]
-#    command: ["/bin/bash"]
