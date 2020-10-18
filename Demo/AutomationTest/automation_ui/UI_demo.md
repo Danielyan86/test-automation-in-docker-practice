@@ -15,10 +15,14 @@ docker build -t automation-test .
 python BingAutomationTest_local.py
 ```
 ### 2. 通过selenium-grid方式在容器里面运行。脚本运行在本地，selenium运行环境环境在容器里。
+容器里面运行情况可以通过VNC viewer查看
 ```shell script
 # 启动容器
+docker run -d --rm -p 5906:25900 -p 4446:24444 --name automation-container_2 -v "$(pwd)":/home/seluser/automation -e SCREEN_WIDTH=1024 -e SCREEN_HEIGHT=768 automation-test:latest
+# 执行脚本
 python BingAutomationTest_container_2.py
 ```
+
 ### 3. 脚本和selenium都在容器里面运行。
 ```shell script
 sh run_script_in_container_2.sh
