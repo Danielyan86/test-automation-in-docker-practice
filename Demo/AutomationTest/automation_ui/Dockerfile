@@ -1,4 +1,4 @@
-FROM elgalu/selenium
+FROM elgalu/selenium:3.141
 RUN sudo apt-get update -y \
 && sudo -H pip install selenium \
 && mkdir /home/seluser/automation/
