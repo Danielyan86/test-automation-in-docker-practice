@@ -5,7 +5,7 @@ from selenium import webdriver
 # 在集群内一个容器访问另外一个容器
 
 url = "web-app:80"
-host = "UI_environment"
+host = "UI_environment"  # docker compose 里面定义的host名字
 selenium_grid_url = f"http://{host}:24444/wd/hub"
 capabilities = webdriver.DesiredCapabilities.CHROME.copy()
 d = webdriver.Remote(command_executor=selenium_grid_url, desired_capabilities=capabilities)
